@@ -51,14 +51,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actors\Floor.cs" />
     <Compile Include="Actors\TemperatureSensor.cs" />
     <Compile Include="Messages\RequestMetadata.cs" />
     <Compile Include="Messages\RequestTemperature.cs" />
+    <Compile Include="Messages\RequestTemperatureSensorIds.cs" />
     <Compile Include="Messages\RequestUpdateTemperature.cs" />
     <Compile Include="Messages\RequestReqisterTemperatireSensor.cs" />
     <Compile Include="Messages\RespondMetadata.cs" />
     <Compile Include="Messages\RespondSensorRegistered.cs" />
     <Compile Include="Messages\RespondTemperature.cs" />
+    <Compile Include="Messages\RespondTemperatureSensorIds.cs" />
     <Compile Include="Messages\RespondTemperatureUpdated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
