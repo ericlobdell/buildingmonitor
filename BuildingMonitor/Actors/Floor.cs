@@ -1,6 +1,7 @@
 ﻿using Akka.Actor;
 using BuildingMonitor.Messages;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 
 namespace BuildingMonitor.Actors
@@ -38,7 +39,7 @@ namespace BuildingMonitor.Actors
           break;
         case RequestTemperatureSensorIds m:
           Sender.Tell(new RespondTemperatureSensorIds(m.RequestId,
-            new HashSet<string>(_sensorIdToActorRefMap.Keys)));
+            ImmutableHashSet.CreateRange(_sensorIdToActorRefMap.Keys)));
           break;
         case Terminated m:
           var terminatedId = _sensorIdToActorRefMap.First(x => x.Value == m.ActorRef).Key;
